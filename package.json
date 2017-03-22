@@ -1,0 +1,22 @@
+{
+    "name": "vbl-loader",
+    "version": "0.0.1",
+    "description": "Loader component for vbl",
+    "main": "src/Loader.vue",
+    "peerDependencies": {
+        "bulma": ">=0.4",
+        "vue": ">=2"
+    },
+    "repository": "vbl-loader",
+    "keywords": [
+        "vue",
+        "bulma",
+        "laravel"
+        "vbl",
+        "vbl-component",
+        "vbl-loader",
+        "loader"
+    ],
+    "author": "Benny Leonard Enrico Panggabean <bendo01@gmail.com>",
+    "license": "MIT"
+}
