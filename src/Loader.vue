@@ -1,9 +1,9 @@
 <template>
-    <div class="modal background-is-black" :class="{ 'is-active':loading }">
+    <div class="modal background-is-black" :class="{ 'is-active':status }">
         <div class="modal-background"></div>
         <div class="modal-content">
             <div class="loading flex-is-justify-content-center" style="text-align: center;">
-              <h2>Proses Data</h2>
+              <h2>{{message}}</h2>
               <span></span>
               <span></span>
               <span></span>
@@ -17,17 +17,30 @@
 </template>
 <script>
 'use strict';
-
+var $ = require('jquery/dist/jquery.slim');
 export default {
-    data: () => ({
-        loading: this.loading
-    }),
-    methods: {
-        start () {
-            this.loading = true;
+    props: {
+        message: {
+            type: String,
+            default: 'Proses Data'
         },
-        finish () {
-            this.loading = false;
+        isLoading: {
+            type: Number,
+            default: 0
+        }
+    },
+    computed: {
+        status: function () {
+            let returned = false;
+            if(this.isLoading > 0) {
+                $('html').addClass('is-clipped');
+                returned = true;
+            }
+            else {
+                $('html').removeClass('is-clipped');
+                returned = false;
+            }
+            return returned;
         }
     }
 };

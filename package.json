@@ -1,11 +1,12 @@
 {
     "name": "vbl-loader",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Loader component for vbl",
     "main": "src/Loader.vue",
-    "peerDependencies": {
+    "dependencies": {
         "bulma": ">=0.4",
-        "vue": ">=2"
+        "vue": ">=2",
+        "jquery": ">=3"
     },
     "repository": "vbl-loader",
     "keywords": [
