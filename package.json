@@ -1,6 +1,6 @@
 {
     "name": "vbl-loader",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Loader component for vbl",
     "main": "src/Loader.vue",
     "dependencies": {

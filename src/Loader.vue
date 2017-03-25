@@ -25,14 +25,14 @@ export default {
             default: 'Proses Data'
         },
         isLoading: {
-            type: Number,
-            default: 0
+            type: Boolean,
+            default: false
         }
     },
     computed: {
         status: function () {
             let returned = false;
-            if(this.isLoading > 0) {
+            if(this.isLoading) {
                 $('html').addClass('is-clipped');
                 returned = true;
             }
